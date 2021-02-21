@@ -145,9 +145,9 @@ class CharacteristicsItem extends Element {
   }
 }
 
-class CostItem extends Element {
+class PriceItem extends Element {
   constructor(value){
-    super('text', value, {classes: ['cost']}, 'p')
+    super('text', value, {classes: ['price']}, 'p')
   }
 }
 
@@ -248,10 +248,10 @@ let timeout = null
 
 let lastOrder = 1
 
-function CreateShopItem(title, characteristics, cost) {
+function CreateShopItem(title, characteristics, price) {
   return new Block([
     new Block([
-      new CostItem(cost)
+      new PriceItem(price)
     ], { classes: 'i-img' }),
     new TitleItem(title, {
       events: {
